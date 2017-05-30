@@ -10,8 +10,8 @@ export default function styleConstructor(theme={}) {
       alignItems: 'center'
     },
     text: {
-      marginTop: 4,
-      fontSize: 16,
+      marginTop: 5,
+      fontSize: 15,
       fontWeight: '300',
       color: appStyle.dayTextColor,
       backgroundColor: 'rgba(255, 255, 255, 0)'
@@ -35,7 +35,6 @@ export default function styleConstructor(theme={}) {
     dot: {
       width: 4,
       height: 4,
-      marginTop: 1,
       borderRadius: 2,
       opacity: 0
     },
@@ -48,3 +47,4 @@ export default function styleConstructor(theme={}) {
     }
   });
 }
+
