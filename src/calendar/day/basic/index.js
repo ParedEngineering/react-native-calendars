@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'propTypes';
 import {
   TouchableOpacity,
   Text,
@@ -15,7 +16,7 @@ class Day extends Component {
 
   // TODO: selected + disbled props should be removed
   static propTypes = {
-    state: React.PropTypes.oneOf(['selected', 'disabled', 'today', ''])
+    state: PropTypes.oneOf(['selected', 'disabled', 'today', ''])
   };
 
   shouldComponentUpdate(nextProps) {
