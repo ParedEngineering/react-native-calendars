@@ -12,8 +12,8 @@ export default function(theme={}) {
       alignItems: 'center'
     },
     monthText: {
-      fontSize: 16,
-      fontWeight: '300',
+      fontSize: appStyle.monthTextFontSize,
+      fontFamily: appStyle.monthTextFontFamily,
       color: appStyle.monthTextColor,
       margin: 10
     },
