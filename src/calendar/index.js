@@ -32,12 +32,13 @@ class Calendar extends Component {
     this.shouldComponentUpdate = shouldComponentUpdate;
   }
 
-  componentWillReceiveProps(nextProps) {
-    const current= parseDate(nextProps.current);
-    if (current && current.toString('yyyy MM') !== this.state.currentMonth.toString('yyyy MM')) {
+  componentDidUpdate(prevProps) {
+    const { current } = this.props
+    const currentDate = parseDate(current)
+    if (currentDate && currentDate.toString('yyyy MM') !== this.state.currentMonth.toString('yyyy MM')) {
       this.setState({
-        currentMonth: current.clone()
-      });
+        currentMonth: currentDate.clone()
+      })
     }
   }
 

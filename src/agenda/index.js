@@ -62,17 +62,18 @@ export default class AgendaView extends Component {
     }
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.loadReservations(this.props);
   }
 
-  componentWillReceiveProps(props) {
-    if (props.items) {
+  componentDidUpdate(prevProps) {
+    const { items } = this.props
+    if (items) {
       this.setState({
         firstResevationLoad: false
-      });
+      })
     } else {
-      this.loadReservations(props);
+      this.loadReservations(this.props)
     }
   }
 
