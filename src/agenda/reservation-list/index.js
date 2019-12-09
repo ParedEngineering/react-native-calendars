@@ -42,7 +42,7 @@ class ReactComp extends Component {
     this.scrollOver = true;
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.updateDataSource(this.getReservations(this.props).reservations);
   }
 
